@@ -1,0 +1,56 @@
+#clipboardProxy{
+  position:absolute;
+  top:-99999px;
+  left:-99999px
+}
+.transitionWrapper{
+  position:absolute;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size:18px;
+  bottom:50px;
+  left: calc(50% - 250px);
+}
+#copyAlertWrapper{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:500px;
+  height:50px;
+  color:white;
+  box-shadow: 6px 6px 0 #454545;
+  transform:skewX(-15deg);
+  &.success{
+    background-color:#48e98a;
+  }
+  &.failed{
+    background-color:#fe4551;
+  }
+  #copyAlert{
+    transform:skewX(15deg);
+  }
+}
+
+.alert-enter{
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.alert-enter-active {
+  opacity:1;
+  transform: translateY(0);
+  transition: all 500ms ease-in;
+}
+
+.alert-exit{
+  opacity:1;
+  transform: translateY(0);
+}
+
+.alert-exit-active {
+  transition: all 500ms ease-out;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
